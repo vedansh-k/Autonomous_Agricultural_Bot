@@ -1,4 +1,4 @@
-## Manual installation of linorobot2 package on robot computer
+## Manual installation of agricultural_bot package on robot computer
 
 ### 1. Install micro-ROS and its dependencies
 
@@ -85,9 +85,9 @@ Zed Camera:
 
 * You can ignore `1 package had stderr output: microxrcedds_agent` after building your workspace. 
 
-### 2. Download linorobot2 and its dependencies:
+### 2. Download agricultural_bot and its dependencies:
 
-#### 2.1 Download linorobot2:
+#### 2.1 Download agricultural_bot:
 
     cd <your_ws> 
     git clone -b $ROS_DISTRO https://github.com/linorobot/linorobot2 src/linorobot2
@@ -99,14 +99,14 @@ If you're installing this on the robot's computer or you don't need to run Gazeb
     cd src/linorobot2/linorobot2_gazebo
     touch COLCON_IGNORE
 
-#### 2.3 Install linorobot2 package:
+#### 2.3 Install agricultural_bot package:
     
     cd <your_ws>
     rosdep update && rosdep install --from-path src --ignore-src -y --skip-keys microxrcedds_agent
     colcon build
     source install/setup.bash
 
-* microxrcedds_agent dependency checks are skipped to prevent this [issue](https://github.com/micro-ROS/micro_ros_setup/issues/138) of finding its keys. This means that you have to always add `--skip-keys microxrcedds_agent` whenever you have to run `rosdep install` on the ROS2 workspace where you installed linorobot2.
+* microxrcedds_agent dependency checks are skipped to prevent this [issue](https://github.com/micro-ROS/micro_ros_setup/issues/138) of finding its keys. This means that you have to always add `--skip-keys microxrcedds_agent` whenever you have to run `rosdep install` on the ROS2 workspace where you installed agricultural_bot.
 
 ## ENV Variables
 ### 1. Robot Type
@@ -207,7 +207,7 @@ and paste the following:
 Remember to replace:
 - `user` with your machine's user name (`echo $USER`)
 - `your_ros_distro` with the ros2 distro (`echo $ROS_DISTRO`) your machine is running on
-- `your_ws` with the location of the ros2 ws where you installed linorobot2
+- `your_ws` with the location of the ros2 ws where you installed agricultural_bot
 
 ### 2.3 Enable the service
 
