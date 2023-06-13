@@ -14,12 +14,12 @@ The image below summarizes the topics available after running **bringup.launch.p
 ## Installation 
 This package requires ros-foxy or ros-galactic. 
 
-### 1. Robot Computer - linorobot2 Package
+### 1. Robot Computer - agricultural_bot Package
 The easiest way to install this package on the robot computer is to run the bash script found in this package's root directory. It will install all the dependencies, set the ENV variables for the robot base and sensors, and create a linorobot2_ws (robot_computer_ws) on the robot computer's `$HOME` directory. If you're using a ZED camera with a Jetson Nano, you must create a custom Ubuntu 20.04 image for CUDA and the GPU driver to work. Here's a quick [guide](./ROBOT_INSTALLATION.md#1-creating-jetson-nano-image) on how to create a custom image for Jetson Nano.
 
     source /opt/ros/<ros_distro>/setup.bash
     cd /tmp
-    wget https://raw.githubusercontent.com/linorobot/linorobot2/${ROS_DISTRO}/install_linorobot2.bash
+    wget https://raw.githubusercontent.com/vedansh-k/Autonomous_Agricultural_Bot/${ROS_DISTRO}/install_linorobot2.bash
     bash install_linorobot2.bash <robot_type> <laser_sensor> <depth_sensor>
     source ~/.bashrc
 
@@ -55,7 +55,7 @@ Alternatively, follow this [guide](./ROBOT_INSTALLATION.md) to do the installati
 ### 2. Host Machine / Development Computer - Gazebo Simulation (Optional)
 This step is only required if you plan to use Gazebo later. This comes in handy if you want to fine-tune parameters (ie. SLAM Toolbox, AMCL, Nav2) or test your applications on a virtual robot. 
 
-#### 2.1 Install linorobot2 Package
+#### 2.1 Install agricultural_bot Package
 Install linorobot2 package on the host machine:
 
     cd <host_machine_ws>
